@@ -15,3 +15,5 @@ class MyTest:
         user_query = User.query.all()
         for user in user_query:
             print(user.name, user.email)
+    def show_test(self):
+        print("Showing test!")
