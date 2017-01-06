@@ -1,11 +1,11 @@
 from sqlalchemy import Column, Integer, String
-from gumbi.db.database import Base
+from .database import Base
 
 class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
-    name = Column(String(50), unique=True)
-    email = Column(String(120), unique=True)
+    name = Column(String(50))
+    email = Column(String(120))
 
     def __init__(self, name=None, email=None):
         self.name = name
